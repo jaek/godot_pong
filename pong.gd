@@ -10,9 +10,6 @@ var pad_size
 var direction = Vector2(1.0, 0.0)
 var ball_speed = INITIAL_BALL_SPEED
 
-
-
-
 func _ready():
 	screen_size = get_viewport_rect().size
 	pad_size = get_node("left").get_texture().get_size()
