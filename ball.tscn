@@ -1,0 +1,33 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://sprites/BALL.png" type="Texture" id=1]
+
+[sub_resource type="CircleShape2D" id=1]
+
+custom_solver_bias = 0.0
+radius = 10.0
+
+[node name="ball" type="Node2D" index="0"]
+
+[node name="ball" type="Sprite" parent="." index="0"]
+
+rotation = 1.5708
+scale = Vector2( 0.25, 0.25 )
+texture = ExtResource( 1 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="KinematicBody2D" type="KinematicBody2D" parent="ball" index="0"]
+
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+collision/safe_margin = 0.08
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ball/KinematicBody2D" index="0"]
+
+position = Vector2( 0.233396, -1.15087 )
+scale = Vector2( 2.17491, 2.33278 )
+shape = SubResource( 1 )
+_sections_unfolded = [ "Transform", "Z Index" ]
+
+
